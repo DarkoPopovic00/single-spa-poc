@@ -18,6 +18,11 @@ export const routes: Routes = [
     canActivate: [AuthGuard]
   },
   { 
+    path: 'app3', 
+    component: EmptyRouteComponent,
+    canActivate: [AuthGuard]
+  },
+  { 
     path: '', 
     redirectTo: '/app1', 
     pathMatch: 'full' 

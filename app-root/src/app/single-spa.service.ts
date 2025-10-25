@@ -20,6 +20,13 @@ export class SingleSpaService {
       app: () => (window as any).System.import('http://localhost:4202/main.js'),
       activeWhen: ['/app2']
     });
+
+    // Register App 3
+    registerApplication({
+      name: 'app3',
+      app: () => (window as any).System.import('http://localhost:4203/main.js'),
+      activeWhen: ['/app3']
+    });
   }
 
   start(): void {
