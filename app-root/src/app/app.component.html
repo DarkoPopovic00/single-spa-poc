@@ -1,0 +1,16 @@
+<div *ngIf="isAuthenticated">
+  <nav class="navbar">
+    <a routerLink="/app1" routerLinkActive="active">App 1</a>
+    <a routerLink="/app2" routerLinkActive="active">App 2</a>
+    <button (click)="logout()">Logout</button>
+  </nav>
+
+  <div class="container">
+    <!-- Single-SPA apps will mount here -->
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<div *ngIf="!isAuthenticated" class="loading">
+  Authenticating...
+</div>

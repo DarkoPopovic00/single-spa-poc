@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app1';
+  constructor() {
+     const authService = (window as any).authService;
+      console.log('AuthService from App1:', authService);
+  }
 }
